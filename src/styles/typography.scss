@@ -1,0 +1,84 @@
+// typography
+
+// font weights
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+// font families
+$font-family-roboto: 'Roboto', 'Nato Sans', Arial, Helvetica, san-serif;
+
+// font style properties listed in $font-sytle map
+$font-properties: ('font-family', 'font-weight', 'font-size', 'line-height', 'letter-spacing', 'text-transform');
+
+$font-styles: (
+  'display-1': (
+    'large': ($font-family-roboto, $font-weight-bold, 45px, 45px, none),
+    'small': ($font-family-roboto, $font-weight-bold, 45px, 45px, none)
+  ),
+  'display-2': (
+    'large': ($font-family-roboto, $font-weight-bold, 45px, 45px, none),
+    'small': ($font-family-roboto, $font-weight-bold, 45px, 45px, none)
+  )
+)
+
+//$font-fonts: map-merge($font-styles, $extend-fonts);
+
+// crop-options here from text-crop.eightshapes.com
+
+//@mixin text-crop () {}
+
+// returns fonts
+//Returns CSS property-value pairs from the given list.
+//@mixin lb-get-type-properties($properties, $override-properties-map: ()) {
+//  @include lb-text-crop;
+//  @for $i from 1 through length($lb-font-properties) {
+//  @if length($properties) >= $i {
+//    $property: nth($lb-font-properties, $i);
+//    $value: nth($properties, $i);
+//  // If this property is found in the override map, change the value.
+//  // Then remove the pair from the map.
+// $override-value-for-property: map-get($override-properties-map, #{$property});
+//    @if $override-value-for-property {
+//      $value: $override-value-for-property;
+//      $override-properties-map: map-remove($override-properties-map, #{$property});
+//    }
+//    #{$property}: #{$value};
+//  }
+//  }
+//// Apply the remaining property/value pairs from the override map, if any.
+// @each $property, $value in $override-properties-map {
+//   #{$property}: #{$value};
+// }
+//}
+//
+//// Returns type properties for the given name.
+//// Allows overriding properties, which takes effect across all breakpoints.
+//@mixin lb-set-type($name, $color: map-get($lb-font-colors, 'black'), $override-properties-map: ()) {
+//  color: $color;
+//  $properties: map-get($lb-fonts, $name);
+//  @if type-of($properties) == 'list' {
+//    @include lb-get-type-properties($properties, $override-properties-map);
+//  }
+//} @else {
+//  @include lb-get-type-properties(map-get($properties, 'default'), $override-properties-map);
+//  @if map-get($properties, 'medium') {
+//    @include tablet-up {
+//      @include lb-get-type-properties(map-get($properties, 'medium'), $override-properties-map);
+//    }
+//  }
+//  @if map-get($properties, 'large') {
+//    @include desktop-up {
+//      @include lb-get-type-properties(map-get($properties, 'large'), $override-properties-map);
+//    }
+//  }
+//}
+//
+//// Noto Sans for non-Latin characters.
+//.lb-non-latin-lang & {
+//  font-family: $lb-font-family-noto;
+//}
+//}
+//}
+

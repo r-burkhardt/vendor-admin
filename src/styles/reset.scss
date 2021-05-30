@@ -1,0 +1,109 @@
+@import 'colors';
+@import 'typography';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  & .no-scroll {
+    height: 100%;
+    overflow: hidden !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+
+  & .no-scroll {
+    height: 100%;
+    overflow: hidden !important;
+  }
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a:active,
+a:focus,
+button:active,
+button:focus,
+select:active,
+select:focus,
+input:focus {
+  outline: var(y-color-green-400) auto 5px;
+}
+
+.can-focus {
+  a:active,
+  a:focus,
+  button:active,
+  button:focus,
+  select:active,
+  select:focus,
+  input:focus,
+  img:focus {
+    outline: var(y-color-green-400) auto 5px;
+  }
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-roboto;
+  font-size: inherit;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ol,
+ul,
+dl,
+dd,
+dt {
+  list-style: none;
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+.y-hide {
+  display: none !important;
+}

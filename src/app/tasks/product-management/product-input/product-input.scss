@@ -1,0 +1,104 @@
+.ysa-product-input {
+  margin-bottom: var(--y-size-xxl);
+  padding-top: var(--y-size-xs);
+  width: 100%;
+
+  &__form-wrapper {
+    max-width: 600px;
+    width: 100%;
+    //background: url(https://loremflickr.com/900/900);
+    background-size: cover;
+  }
+
+  &__error-message-wrapper {
+    min-height: 28px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: var(--y-size-xs);
+  }
+
+  &__error-message {
+    color: var(--y-color-error-300);
+    font-weight: 700;
+  }
+
+  &__input-set {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--y-size-xs);
+    width: 100%;
+
+    &--with-sub-set {
+      display: inline-block;
+    }
+  }
+
+  &__input-set-inner-box {
+    border: 1px solid var(--y-color-black-100);
+    padding: var(--y-size-xxs) var(--y-size-xs);
+    width: max-content;
+  }
+
+  &__input-sub-set-label {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  &__input-sub-set {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--y-size-xxs);
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input-label {
+    display: inline-block;
+    width: 176px;
+  }
+
+  &__input-element {
+    display: inline-block;
+    margin-left: var(--y-size-xs);
+    width: 192px;
+  }
+
+  &__input-element-secondary {
+    display: inline-block;
+    margin-left: var(--y-size-xs);
+    width: 80px;
+  }
+
+  //&__input-button {
+  //  border-radius: 4px;
+  //  font-size: 14px;
+  //  font-weight: 700;
+  //  margin-left: var(--y-size-s);
+  //  padding: var(--y-size-xxs) var(--y-size-xs);
+  //  text-transform: uppercase;
+  //
+  //  &:first-child {
+  //    margin-left: 0;
+  //  }
+  //
+  //  &--primary {
+  //    background: var(--y-color-green-600);
+  //    border: none;
+  //    color: var(--y-color-grey-000);
+  //  }
+  //
+  //  &--secondary {
+  //    background: var(--y-color-grey-000);
+  //    border: 1px solid var(--y-color-green-600);
+  //    color: var(--y-color-green-600;
+  //  }
+  //}
+}
+
+input:invalid {
+  outline: 2px solid red;
+}

@@ -1,0 +1,15 @@
+<div>
+  <div class="seller-admin__sub-nav">
+    <a [routerLink]="'input'" class="seller-admin__link"
+       routerLinkActive="seller-admin__link--active">Input</a>
+    <a [routerLink]="'import'" class="seller-admin__link"
+       routerLinkActive="seller-admin__link--active">Import</a>
+    <a [routerLink]="'lookup'" class="seller-admin__link"
+       routerLinkActive="seller-admin__link--active">Lookup</a>
+    <a [routerLink]="'adjust'" class="seller-admin__link"
+       routerLinkActive="seller-admin__link--active">Adjust</a>
+  </div>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

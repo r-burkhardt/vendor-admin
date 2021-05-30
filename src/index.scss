@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../styles/globals';
+
+html, body {
+  background: var(--y-color-white-400);
+  color: var(--y-color-black-300);
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.seller-admin {
+  &__link {
+    color: var(--y-color-green-600);
+    font-size: 16px;
+    line-height: 20px;
+    margin: var(--y-size-xxs) var(--y-size-xs) var(--y-size-xxs) 0;
+    text-decoration: none;
+
+    svg {
+      fill: var(--y-color-green-600);
+      height:20px;
+      vertical-align: -4px;
+    }
+
+    &:focus,
+    &:hover {
+      color: var(--y-color-green-900);
+
+      svg {
+        fill: var(--y-color-green-900);
+      }
+    }
+
+    &--active {
+      color: var(--y-color-green-600);
+      font-weight: 700;
+
+      svg {
+        fill: var(--y-color-green-600);
+      }
+
+      &:focus,
+      &:hover {
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: var(--y-size-xs);
+  }
+
+  &__sub-nav {
+    margin-bottom: var(--y-size-xs);
+  }
+
+  &__container {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__container-content {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: var(--y-size-xs) var(--y-size-s);
+    width: 100%;
+  }
+}
+
+input {
+  background: var(--y-color-white-400);
+  border-width: 1px;
+  border-radius: 2px;
+}

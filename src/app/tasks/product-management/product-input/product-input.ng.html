@@ -1,0 +1,161 @@
+<div class="ysa-product-input">
+  <h3>Product Input</h3>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()"
+        class="ysa-product-input__form-wrapper">
+    <div class="ysa-product-input__error-message-wrapper">
+      <span *ngIf="errorMessage" class="ysa-product-input__error-message">
+        {{ errorMessage }}
+      </span>
+    </div>
+    <fieldset>
+      <div class="ysa-product-input__input-set">
+        <label for="upc_input" class="ysa-product-input__input-label">
+          UPC / EAN / JAN / ISBN</label>
+        <input type="text" id="upc_input" name="upc"
+            formControlName="FCProductCode"
+            class="ysa-product-input__input-element">
+        <select class="ysa-product-input__input-element-secondary"
+            formControlName="FCProductCodeType">
+          <option *ngFor="let code of productCodeTypes"
+              [ngValue]="code[0]">
+            {{ code[1] }}</option>
+        </select>
+      </div>
+<!--      <div>-->
+<!--        {{ newProductFG.FCProductCode.value }}-->
+<!--      </div>-->
+      <div class="ysa-product-input__input-set">
+        <label for="name_input" class="ysa-product-input__input-label">
+          Name</label>
+        <input type="text" id="name_input" name="name"
+            (focusout)="prefillSearchTags()" formControlName="FCProductName"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="short_description_input"
+               class="ysa-product-input__input-label">
+          Short Description</label>
+        <input type="text" id="short_description_input"
+            name="short_description" formControlName="FCProductShortDesc"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="description_input" class="ysa-product-input__input-label">
+          Description</label>
+        <textarea id="description_input" name="short_description"
+            formControlName="FCProductDesc"
+            class="ysa-product-input__input-element"></textarea>
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="search_tags_input" class="ysa-product-input__input-label">
+          Search Tags</label>
+        <input type="text" id="search_tags_input" name="search_tags"
+            formControlName="FCProductSearchTags"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="condition_select" class="ysa-product-input__input-label">
+          Condition</label>
+        <select id="condition_select" name="condition"
+            formControlName="FCProductCondition"
+            class="ysa-product-input__input-element">
+          <option *ngFor="let condition of productConditions" [ngValue]="condition[0]">
+            {{ condition[1] }}</option>
+        </select>
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="brand_input" class="ysa-product-input__input-label">
+          Brand</label>
+        <input type="text" id="brand_input" name="brand"
+            formControlName="FCProductBrand"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="category_input" class="ysa-product-input__input-label">
+          Category</label>
+        <input type="text" id="category_input" name="category_id"
+            formControlName="FCProductCategoryId"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="addl_category_input" class="ysa-product-input__input-label">
+          Additional Category</label>
+        <input type="text" id="addl_category_input" name="addl_category_id"
+            formControlName="FCProductAddCatId"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="sku_input" class="ysa-product-input__input-label">
+          SKU</label>
+        <input type="text" id="sku_input" name="sku"
+            formControlName="FCProductSku"
+            class="ysa-product-input__input-element">
+      </div>
+      <div class="ysa-product-input__input-set">
+        <label for="weight_input" class="ysa-product-input__input-label">
+          Weight(decimal)</label>
+        <input type="number" id="weight_input" name="weight"
+            formControlName="FCProductPkgWeight"
+            class="ysa-product-input__input-element">
+        <select class="ysa-product-input__input-element-secondary"
+            formControlName="FCProductPkgWeightUnit">
+          <option *ngFor="let weight of productWeightUnits"
+                  [ngValue]="weight[0]">
+            {{ weight[1] }}</option>
+        </select>
+      </div>
+      <div
+        class="ysa-product-input__input-set ysa-product-input__input-set--with-sub-set">
+        <label class="ysa-product-input__input-sub-set-label">Package
+          Dimensions</label>
+        <div class="ysa-product-input__input-set-inner-box">
+          <div class="ysa-product-input__input-sub-set">
+            <label for="pkg_dim_height_input"
+                   class="ysa-product-input__input-label">
+              Height</label>
+            <input type="number" id="pkg_dim_height_input" name="pkg_dim_height"
+                formControlName="FCProductPkgDimHeight"
+                class="ysa-product-input__input-element">
+          </div>
+          <div class="ysa-product-input__input-sub-set">
+            <label for="pkg_dim_width_input"
+                   class="ysa-product-input__input-label">
+              Width</label>
+            <input type="number" id="pkg_dim_width_input" name="pkg_dim_width"
+                formControlName="FCProductPkgDimWidth"
+                class="ysa-product-input__input-element">
+          </div>
+          <div class="ysa-product-input__input-sub-set">
+            <label for="pkg_dim_depth_input"
+                   class="ysa-product-input__input-label">
+              Depth</label>
+            <input type="number" id="pkg_dim_depth_input" name="pkg_dim_depth"
+                formControlName="FCProductPkgDimDepth"
+                class="ysa-product-input__input-element">
+          </div>
+          <div class="ysa-product-input__input-sub-set">
+            <label for="pkg_dim_unit_input"
+                class="ysa-product-input__input-label">
+              Units</label>
+            <select id="pkg_dim_unit_input" name="pkg_dim_unit"
+                formControlName="FCProductPkgDimUnit"
+                class="ysa-product-input__input-element">
+              <option *ngFor="let unit of productDimUnits" [ngValue]="unit[0]">
+                {{ unit[1] }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="y-button y-button--filled y-elevation-1-key"
+            type="submit" [disabled]="!productForm.valid">
+          Submit</button>
+        <button class="y-button y-button__hairline" type="button"
+            (click)="onLog()">Log</button>
+        <button class="y-button y-button__hariline" type="reset"
+            (click)="resetProduct()" (keydown.enter)="resetProduct()">
+          Reset</button>
+      </div>
+    </fieldset>
+  </form>
+</div>

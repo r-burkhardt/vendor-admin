@@ -1,0 +1,23 @@
+.ysa-tasks {
+
+  &__header-container {
+    background: var(--y-color-green-100);
+  }
+
+  &__header-content {
+    //color: var(--y-color-black-300);
+    //padding: var(--y-size-xs) var(--y-size-s);
+  }
+
+  &__nav {
+    margin-top: var(--y-size-xs);
+  }
+
+  &__body-container {
+
+  }
+
+  &__body-content {
+    //padding: var(--y-size-xs) var(--y-size-s);
+  }
+}

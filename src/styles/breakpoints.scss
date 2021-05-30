@@ -1,0 +1,53 @@
+// Breakpoints
+$breakpoints: ('mobile', 'tablet', 'tablet-landscape', 'desktop', 'desktop-l', 'desktop-xl');
+
+// Sizes
+$breakpoint-sizes: (
+        'mobile': 599px,
+        'tablet': 600px,
+        'tablet-landscape': 900px,
+        'desktop': 1200px,
+        'desktop-l': 1500px,
+        'desktop-xl': 1800px
+);
+
+// Orientations
+$orientation-landscape: 'landscape';
+$orientation-portrait: 'portrait';
+
+
+@mixin mobile-up {
+  @media screen and (max-width: map_get($breakpoint-sizes, 'mobile')) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: map_get($breakpoint-sizes, 'tablet')) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media screen and (min-width: map_get($breakpoint-sizes, 'tablet-landscape')) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: map_get($breakpoint-sizes, 'desktop')) {
+    @content;
+  }
+}
+
+@mixin desktop-l-up {
+  @media screen and (min-width: map_get($breakpoint-sizes, 'desktop-l')) {
+    @content;
+  }
+}
+
+@mixin desktop-xl-up {
+  @media screen and (min-width: map_get($breakpoint-sizes, 'desktop-xl')) {
+    @content;
+  }
+}

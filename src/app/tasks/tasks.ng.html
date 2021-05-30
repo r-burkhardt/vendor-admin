@@ -1,0 +1,28 @@
+<div class="ysa-tasks">
+  <div class="seller-admin__container ysa-tasks__header-container">
+    <div class="seller-admin__container-content ysa-tasks__header-content">
+      <h2>Seller Tasks</h2>
+      <nav class="ysa-tasks__nav">
+        <a [routerLink]="'../'" class="seller-admin__link">
+          <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.795 50.635a5.016 5.016 0 0 0 1.147 1.307l23.635 23.635a5 5 0 0 0 7.071-7.07L29.071 52.928H79a5 5 0 0 0 0-10H29.255l15.393-15.394a5 5 0 1 0-7.07-7.07L14.358 43.681A4.997 4.997 0 0 0 12 47.93c0 .997.292 1.926.795 2.706z"
+                  fill="inherit"/>
+          </svg>
+          Home
+        </a>
+        <a [routerLink]="'product-management'" class="seller-admin__link"
+           routerLinkActive="seller-admin__link--active">
+          Product Management</a>
+        <a [routerLink]="'order-management'" class="seller-admin__link"
+           routerLinkActive="seller-admin__link--active">
+          Order Management</a>
+      </nav>
+    </div>
+  </div>
+  <div class="seller-admin__container ysa-tasks__body-container">
+    <div class="seller-admin__container-content ysa-tasks__body-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
